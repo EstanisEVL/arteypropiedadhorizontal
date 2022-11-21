@@ -1,0 +1,25 @@
+@use '../utils/forwards' as *;
+
+.main-text-container {
+  max-width: 80%;
+  @include flexbox(flex, column, nowrap, flex-start, stretch);
+  color: $dark;
+  margin: 1rem auto;
+  text-align: justify;
+
+  h1 {
+    align-self: center;
+    margin-bottom: 2rem;
+    font-family: 'Raleway-bold';
+    font-size: $fz-mobile-title;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: $fz-mobile-subtitle;
+  }
+  p {
+    font-size: $fz-mobile-p;
+    margin-bottom: 1rem;
+  }
+}

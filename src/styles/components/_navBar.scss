@@ -1,0 +1,29 @@
+@use '../utils/forwards' as *;
+
+.navbar-container {
+  margin-top: 1rem;
+  .navbar {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    @include flexbox(flex, row, nowrap, center, flex-start);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .navbar-container {
+    .navbar {
+      @include flexbox(flex, row, nowrap, center, center);
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .navbar-container {
+    margin-bottom: 1rem;
+    @include flexbox(flex, row, nowrap, center, center);
+    .navbar {
+      gap: 1rem;
+    }
+  }
+}

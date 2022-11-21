@@ -1,0 +1,42 @@
+@use '../utils/forwards' as *;
+
+.title-container {
+  width: 80%;
+  @include flexbox(flex, column, nowrap, flex-start, flex-start);
+  h1 {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: $fz-mobile-subtitle;
+    span {
+      font-family: 'Raleway-bold';
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .title-container {
+    @include flexbox(flex, row, nowrap, space-between, center);
+    h1 {
+      margin-left: 2rem;
+      font-size: clamp($fz-text, 5vw, $fz-subtitle);
+      span {
+        font-family: 'Raleway-bold';
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .title-container {
+    @include flexbox(flex, row, nowrap, center, center);
+    h1 {
+      margin: 0;
+      font-size: min(5vw, $fz-title) ;
+      font-family: 'Raleway-bold';
+      span {
+        font-family: 'Raleway-bold';
+      }
+    }
+  }
+}

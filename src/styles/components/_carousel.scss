@@ -1,0 +1,51 @@
+@use '../utils/forwards' as *;
+
+.mySwiper {
+  color: $main;
+  .swiper-wrapper {
+    .carousel-img {
+      max-width: 100%;
+    }
+  }
+  .swiper-button-prev {
+    color: $main;
+  }
+  .swiper-button-next {
+    color: $main;
+  }
+  .swiper-pagination {
+    .swiper-pagination-bullet-active {
+      background-color: $main;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .carousel-container {
+    background-image: url('../../assets/img/Fondo-carrusel.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include flexbox(flex, row, nowrap, center, center);
+    .mySwiper {
+      max-width: 60%;
+      color: $main;
+      .swiper-wrapper {
+        .carousel-img {
+          max-width: 100%;
+        }
+      }
+      .swiper-button-prev {
+        color: $main;
+      }
+      .swiper-button-next {
+        color: $main;
+      }
+      .swiper-pagination {
+        .swiper-pagination-bullet-active {
+          background-color: $main;
+        }
+      }
+    }
+  }
+}

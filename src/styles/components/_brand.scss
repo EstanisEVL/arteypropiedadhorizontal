@@ -1,0 +1,21 @@
+@use '../utils/forwards' as *;
+
+.brand-container {
+  width: 20%;
+  a {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .brand-container {
+    max-width: 15%;
+    a {
+      img {
+        max-width: 80%;
+      }
+    }
+  }
+}

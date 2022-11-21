@@ -1,0 +1,89 @@
+@use '../utils/forwards' as *;
+
+.navbar-categories {
+  background-color: $main;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  .categories-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    ul {
+      @include flexbox(flex, row, wrap, space-between, center);
+      list-style: none;
+      li {
+        a {
+          color: $light;
+          font-family: 'Raleway-semibold';
+          font-size: $fz-mobile-subtitle;
+          text-decoration: none;
+          transition: all 0.3s;
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*---- Tablet: ----*/
+@media (min-width: 600px) {
+  .navbar-categories {
+    .categories-container {
+      // position: fixed;
+      padding-top: 5rem;
+      padding-bottom: 1rem;
+      ul {
+        @include flexbox(flex, column, wrap, space-between, flex-start);
+        list-style: none;
+        li {
+          margin-bottom: 3rem;
+          a {
+            color: $light;
+            font-family: 'Raleway-semibold';
+            font-size: $fz-text;
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover {
+              color: $secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .navbar-categories {
+    @include flexbox(flex, row, nowrap, center, center);
+    background-color: $main;
+    .categories-container {
+      max-width: 90%;
+      @include flexbox(flex, row, nowrap, space-between, center);
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      gap: 3rem;
+      .ul-container {
+        ul {
+          @include flexbox(flex, row, nowrap, space-between, center);
+          list-style: none;
+          gap: 1rem;
+          li {
+            margin: 0;
+            a {
+              color: $light;
+              font-family: 'Raleway-semibold';
+              font-size: clamp($fz-text, 2.5vw, $fz-subtitle);
+              text-decoration: none;
+              transition: all 0.3s;
+              &:hover {
+                color: $secondary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

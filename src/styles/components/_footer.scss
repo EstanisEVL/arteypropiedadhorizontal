@@ -1,0 +1,197 @@
+@use '../utils/forwards' as *;
+
+@media (max-width: 599px) {
+  .footer-container {
+    padding-left: 1rem;
+    color: $secondary;
+    background-color: $dark;
+    @include flexbox(flex, column, nowrap, flex-start, flex-start);
+    gap: 3.75rem;
+    .footer-site-map {
+      margin-top: 2rem;
+      font-size: $fz-mobile-subtitle;
+      font-weight: bolder;
+      h3 {
+        font-size: $fz-mobile-title;
+        margin-bottom: 1rem;
+      }
+      ul {
+        li {
+          margin-bottom: 1rem;
+          list-style-type: none;
+          a {
+            color: $secondary;
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover {
+              color: $main;
+            }
+          }
+        }
+      }
+    }
+  
+    .footer-contact-buttons {
+      h3 {
+        font-size: $fz-mobile-title;
+        margin-bottom: 1rem;
+      }
+      .contact-btns-container {
+        @include flexbox(flex, row, nowrap, center, center);
+        a {
+          padding: 1rem;
+          transition: all 0.3s;
+          &:hover {
+            background-color: $main;
+          }
+        }
+      }
+    }
+  
+    .footer-mecenazgo {
+      h3 {
+        font-size: $fz-mobile-subtitle;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: $fz-mobile-p;
+        margin-bottom: 0.5rem;
+      }
+    }
+  
+    .footer-developer {
+      margin-bottom: 3.125rem;
+      a {
+        @include flexbox(flex, row, nowrap, flex-start, center);
+        color: $secondary;
+        text-decoration: none;
+        font-size: 0.8rem;
+        .developer-logo {
+          margin: 0 0.5em;
+          width: 20%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .footer-container {
+    @include flexbox(flex, column, nowrap, flex-start, flex-end);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: $light;
+    background-color: $main;
+    gap: 3.75rem;
+    .footer-mecenazgo {
+      h3 {
+        font-size: $fz-text;
+        font-family: 'Raleway';
+        margin-bottom: 1rem;
+        font-weight: 300;
+      }
+      p {
+        font-size: clamp(1rem, 1.125rem, $fz-text);
+        margin-bottom: 0.5rem;
+      }
+    }
+  
+    .footer-developer {
+      margin-bottom: 3.125rem;
+      font-size: clamp(0.5rem, 0.8rem, 1.125rem);
+      a {
+        @include flexbox(flex, row, nowrap, center, center);
+        color: $light;
+        text-decoration: none;
+        font-size: 0.8rem;
+        .developer-logo {
+          margin: 0 0.5em;
+          width: 35%;
+        }
+      }
+    }
+  }
+}
+
+/*---- Desktop: ----*/
+@media (min-width: 900px) {
+  .footer-container {
+    padding: 0;
+    color: $secondary;
+    background-color: $dark;
+    @include flexbox(flex, column, nowrap, flex-start, stretch);
+    .footer-main-content {
+      margin-top: 4rem;
+      padding-left: 10%;
+      padding-right: 10%;
+      display: flex;
+      justify-content: space-between;
+      .footer-site-map {
+        max-width: 40%;
+        font-size: $fz-subtitle;
+        font-weight: bolder;
+        ul {
+          li {
+            margin-bottom: 2rem;
+            list-style-type: none;
+            a {
+              color: $secondary;
+              text-decoration: none;
+              transition: all 0.3s;
+              &:hover {
+                color: $main;
+              }
+            }
+          }
+        }
+      }
+      .footer-contact-buttons {
+        @include flexbox(flex, column, nowrap, flex-start, center);
+        h3 {
+          font-size: $fz-subtitle;
+          margin-bottom: 1rem;
+        }
+        .contact-btns-container {
+          @include flexbox(flex, row, nowrap, center, center);
+          gap: 1rem;
+          a {
+            @include flexbox(flex, row, nowrap, center, center);
+            transition: all 0.3s;
+            &:hover {
+              background-color: $main;
+            }
+            img {
+              max-width: 70%;
+            }
+          }
+        }
+      }
+      .footer-mecenazgo {
+        @include flexbox(flex, column, nowrap, flex-start, stretch);
+        h3 {
+          font-size: $fz-subtitle;
+          margin-bottom: 2rem;
+        }
+        p {
+          font-size: $fz-text;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+  .footer-developer {
+    background-color: $dark;
+    padding-bottom: 3rem;
+    @include flexbox(flex, row, nowrap, center, center);
+    a {
+      @include flexbox(flex, row, nowrap, flex-start, center);
+      color: $secondary;
+      text-decoration: none;
+      font-size: 1rem;
+      .developer-logo {
+        margin: 0 0.5em;
+        max-width: 15%;
+      }
+    }
+  }
+}

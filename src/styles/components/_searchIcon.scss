@@ -1,0 +1,26 @@
+@use '../utils/forwards' as *;
+
+.search-icon {
+  @include flexbox(flex, column, wrap, center, center);
+}
+
+@media (min-width: 600px) {
+  .search-icon {
+    .search-img {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  .search-icon {
+    max-width: 4%;
+    .search-img {
+      width: 100%;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

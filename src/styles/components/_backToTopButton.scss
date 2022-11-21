@@ -1,0 +1,16 @@
+@use '../utils/forwards' as *;
+
+.back-to-top-btn {
+  background-color: $secondary;
+  position: fixed;
+  bottom: 3.125rem;
+  right: 1rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: none;
+  border-radius: 100%;
+  transition: all 0.3s;
+  &:active {
+    background-color: $main;
+  }
+}

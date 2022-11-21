@@ -1,0 +1,14 @@
+@use '../utils/forwards' as *;
+
+.tablet-main-content {
+  @include flexbox(flex, row, nowrap, flex-start, stretch);
+
+  .tablet-sidemenu {
+    @include flexbox(flex, column, nowrap, space-between, stretch);
+    background-color: $main;
+    width: 30%;
+  }
+  .tablet-content {
+    width: 70%;
+  }
+}
