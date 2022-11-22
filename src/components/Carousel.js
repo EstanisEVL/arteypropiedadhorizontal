@@ -11,8 +11,9 @@ const Carousel = props => {
     <div className='carousel-container'>
       <Swiper
         slidesPerView={1}
-        spaceBetween={30}
+        spaceBetween={10}
         loop={true}
+        autoHeight= {true}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false

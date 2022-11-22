@@ -1,6 +1,7 @@
 import SearchIcon from "./SearchIcon";
 import useWindowSize from "../utils/hooks/useWindowSize";
 import ContactButtonsTablet from "./ContactButtonsTablet";
+import { Link } from "react-router-dom";
 
 
 const NavBarCategories = () => {
@@ -11,16 +12,16 @@ const NavBarCategories = () => {
       <div className='categories-container'>
         <ul>
           <li>
-            <a href='/articulos'>Artículos</a>
+            <Link to={`/articulos`}>Artículos</Link>
           </li>
           <li>
-            <a href='/noticias'>Noticias</a>
+            <Link to={`/noticias`}>Noticias</Link>
           </li>
           <li>
-            <a href='/murales'>Murales</a>
+            <Link to={`/murales`}>Murales</Link>
           </li>
           <li>
-            <a href='/mapa'>Mapa</a>
+            <Link to={`/mapa`}>Mapa</Link>
           </li>
           { size.width < 600 && <li><SearchIcon /></li> }
           { (size.width >= 600 && size.width < 900) && <div><ContactButtonsTablet /></div>}
