@@ -2,8 +2,7 @@
 
 .navbar-categories {
   background-color: $main;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding: 0 1rem 0 1rem;
   .categories-container {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -41,7 +40,7 @@
           a {
             color: $light;
             font-family: 'Raleway-semibold';
-            font-size: $fz-text;
+            font-size: $fz-subtitle;
             text-decoration: none;
             transition: all 0.3s;
             &:hover {

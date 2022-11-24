@@ -1,10 +1,11 @@
 @use '../utils/forwards' as *;
 
+/*---- Mobile: ----*/
 .contact-container {
-  @include flexbox(flex, column, nowrap, center, center);
+  @include flexbox(flex, row, nowrap, center, center);
   align-self: flex-end;
   h3 {
-    font-size: $fz-mobile-p;
+    font-size: 3vmin;
     color: $main;
   }
   .contact-btns-container {
@@ -12,13 +13,14 @@
     a {
       padding: 0.1rem 0.5rem ;
       transition: all 0.3s;
-      &:hover {
-        background-color: $dark;
+      &:active {  
+        transform: scale(1.1);
       }
     }
   }
 }
 
+/*---- Tablet: ----*/
 @media (min-width: 600px) {
   .contact-container {
     @include flexbox(flex, column, nowrap, center, flex-start);
@@ -35,8 +37,8 @@
       a {
         padding: 0.1rem 0.5rem ;
         transition: all 0.3s;
-        &:hover {
-          background-color: $dark;
+        &:active {
+          transform: scale(1.3);
         }
         img {
           width: 80%;
@@ -46,7 +48,7 @@
   }
 }
 
-
+/*---- Desktop: ----*/
 @media (min-width: 900px) {
   .contact-container {
     @include flexbox(flex, row, nowrap, flex-start, center);

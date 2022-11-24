@@ -2,7 +2,7 @@
 
 /*---- Mobile: ----*/
 .main-text-container {
-  margin: 5rem 0;
+  margin: 3rem 0;
   padding-left: 10%;
   padding-right: 10%;
   @include flexbox(flex, column, nowrap, center, center);
@@ -16,7 +16,7 @@
       text-align: center;
       margin: 0 0 2rem 0;
       font-family: 'Raleway-bold';
-      font-size: 10vmin;
+      // font-size: 10vmin;
     }
     h2 {
       text-align: center;
