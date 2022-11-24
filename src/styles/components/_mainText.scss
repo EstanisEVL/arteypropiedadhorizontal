@@ -1,25 +1,129 @@
 @use '../utils/forwards' as *;
 
+/*---- Mobile: ----*/
 .main-text-container {
-  max-width: 80%;
-  @include flexbox(flex, column, nowrap, flex-start, stretch);
+  margin: 5rem 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  @include flexbox(flex, column, nowrap, center, center);
   color: $dark;
-  margin: 1rem auto;
   text-align: justify;
+  font-family: 'Roboto';
+  user-select: none;
+  .title-container {
+    @include flexbox(flex, column, nowrap, flex-start, center);
+    h1 {
+      text-align: center;
+      margin: 0 0 2rem 0;
+      font-family: 'Raleway-bold';
+      font-size: 10vmin;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+      font-size: $fz-subtitle;
+    }
+  }
+  .row {
+    .col {
+      @include flexbox(flex, column, nowrap, flex-start, center);
+      p {
+        font-size: $fz-text;
+        margin-bottom: 1rem;
+      }
+      a {
+        align-self: flex-end;
+        color: $dark;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }
+}
 
-  h1 {
-    align-self: center;
-    margin-bottom: 2rem;
-    font-family: 'Raleway-bold';
-    font-size: $fz-mobile-title;
+/*---- Tablet: ----*/
+@media (min-width: 600px) {
+  .main-text-container {
+    margin: 5rem 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    @include flexbox(flex, column, nowrap, center, center);
+    color: $dark;
+    text-align: justify;
+    font-family: 'Roboto';
+    .title-container {
+      @include flexbox(flex, column, nowrap, flex-start, center);
+      h1 {
+        text-align: center;
+        margin: 0 0 2rem 0;
+        font-family: 'Raleway-bold';
+        font-size: 5vmin;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: $fz-subtitle;
+      }
+    }
+    .row {
+      @include flexbox(flex, row, nowrap, space-between, stretch);
+      .col {
+        max-width: 45%;
+        @include flexbox(flex, column, nowrap, flex-start, center);
+        p {
+          font-size: $fz-text;
+          margin-bottom: 1rem;
+        }
+        a {
+          align-self: flex-end;
+          color: $dark;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
   }
-  h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: $fz-mobile-subtitle;
-  }
-  p {
-    font-size: $fz-mobile-p;
-    margin-bottom: 1rem;
+}
+
+/*---- Desktop: ----*/
+@media (min-width: 900px) {
+  .main-text-container {
+    margin: 5rem 0;
+    padding-left: 15%;
+    padding-right: 15%;
+    @include flexbox(flex, column, nowrap, center, center);
+    color: $dark;
+    text-align: justify;
+    .title-container {
+      @include flexbox(flex, column, nowrap, flex-start, center);
+      h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-family: 'Raleway-bold';
+        font-size: 5vmin;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: $fz-subtitle;
+      }
+    }
+    .row {
+      @include flexbox(flex, row, nowrap, space-between, stretch);
+      .col {
+        max-width: 45%;
+        @include flexbox(flex, column, nowrap, flex-start, center);
+        p {
+          font-size: $fz-text;
+          margin-bottom: 1rem;
+        }
+        a {
+          align-self: flex-end;
+          color: $dark;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
   }
 }
