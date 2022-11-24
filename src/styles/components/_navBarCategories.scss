@@ -16,7 +16,7 @@
           font-size: $fz-mobile-subtitle;
           text-decoration: none;
           transition: all 0.3s;
-          &:hover {
+          &:active {
             color: $secondary;
           }
         }
@@ -43,7 +43,7 @@
             font-size: $fz-subtitle;
             text-decoration: none;
             transition: all 0.3s;
-            &:hover {
+            &:active {
               color: $secondary;
             }
           }

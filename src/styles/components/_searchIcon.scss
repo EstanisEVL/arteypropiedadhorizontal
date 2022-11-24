@@ -1,9 +1,11 @@
 @use '../utils/forwards' as *;
 
+/*---- Mobile: ----*/
 .search-icon {
   @include flexbox(flex, column, wrap, center, center);
 }
 
+/*---- Tablet: ----*/
 @media (min-width: 600px) {
   .search-icon {
     .search-img {
@@ -12,6 +14,7 @@
   }
 }
 
+/*---- Desktop: ----*/
 @media (min-width: 900px) {
   .search-icon {
     max-width: 4%;

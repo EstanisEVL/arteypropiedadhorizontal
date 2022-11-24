@@ -24,7 +24,7 @@
             color: $secondary;
             text-decoration: none;
             transition: all 0.3s;
-            &:hover {
+            &:active {
               color: $main;
             }
           }
