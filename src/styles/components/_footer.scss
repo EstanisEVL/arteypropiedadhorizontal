@@ -149,7 +149,7 @@
       .footer-contact-buttons {
         @include flexbox(flex, column, nowrap, flex-start, center);
         h3 {
-          margin-bottom: 1rem;
+          margin-bottom: 2rem;
         }
         .contact-btns-container {
           @include flexbox(flex, row, nowrap, center, center);

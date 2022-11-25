@@ -1,0 +1,55 @@
+@use '../utils/forwards' as *;
+
+@media (max-width: 599px) {
+  .map-section-container {
+    .map-section-title {
+      margin: 1rem;
+      text-align: center;
+      font-size: $fz-mobile-title/1.5;
+    }
+    .map-container {
+      margin: 5% 0;
+    }
+    .accordion-container {
+      @include flexbox(flex, column, nowrap, flex-start, stretch);
+      gap: .5rem;
+      padding: 5% 5%;
+      .comunas-container {
+        @include flexbox(flex, column, nowrap, flex-start, center);
+        color: $light;
+        background-color: $main;
+        font-family: 'Roboto';
+        .comunas-accordion {
+          width: 100%;
+          .accordion-item {
+            @include flexbox(flex, column, nowrap, flex-start, center);
+            .comunas-btn {
+              color: $light;
+              background-color: $main;
+              border: none;
+              font-family: 'Roboto';
+              .comunas-btn-h2 {
+                margin: .5rem;
+                font-size: $fz-mobile-subtitle;
+              }
+              .comunas-btn-barrios {
+                font-size: 1rem;
+              }
+              .comunas-btn-icon {
+                font-size: 1rem;
+              }
+            }
+            .comunas-btn-murales {
+              width: 100%;
+              @include flexbox(flex, column, nowrap, flex-start, center);
+              color: $dark;
+              background-color: $light;
+              border: .1rem solid $main;
+              font-size: $fz-mobile-p;
+            }
+          }
+        }
+      }
+    }
+  }
+}
