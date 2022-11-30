@@ -12,8 +12,9 @@
     }
     .accordion-container {
       @include flexbox(flex, column, nowrap, flex-start, stretch);
-      gap: .5rem;
+      gap: 2rem;
       padding: 5% 5%;
+      margin-bottom: 2.5rem;
       .comunas-container {
         @include flexbox(flex, column, nowrap, flex-start, center);
         color: $light;
@@ -52,4 +53,63 @@
       }
     }
   }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+  .tablet-content {
+    .map-section-title {
+      margin: 1rem;
+      text-align: center;
+      font-size: $fz-subtitle;
+    }
+    .map-container {
+      margin: 5% 0;
+    }
+    .accordion-container {
+      @include flexbox(flex, column, nowrap, flex-start, stretch);
+      gap: 2rem;
+      padding: 5% 5%;
+      margin-bottom: 2rem;
+      .comunas-container {
+        @include flexbox(flex, column, nowrap, flex-start, center);
+        color: $light;
+        background-color: $main;
+        font-family: 'Roboto';
+        .comunas-accordion {
+          width: 100%;
+          .accordion-item {
+            @include flexbox(flex, column, nowrap, flex-start, center);
+            .comunas-btn {
+              color: $light;
+              background-color: $main;
+              border: none;
+              font-family: 'Roboto';
+              .comunas-btn-h2 {
+                margin: .5rem;
+                font-size: $fz-subtitle;
+              }
+              .comunas-btn-barrios {
+                font-size: 1rem;
+              }
+              .comunas-btn-icon {
+                font-size: 1rem;
+              }
+            }
+            .comunas-btn-murales {
+              width: 100%;
+              @include flexbox(flex, column, nowrap, flex-start, center);
+              color: $dark;
+              background-color: $light;
+              border: .1rem solid $main;
+              font-size: $fz-mobile-p;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+
 }
