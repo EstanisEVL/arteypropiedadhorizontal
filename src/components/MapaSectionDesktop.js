@@ -6,8 +6,11 @@ const MapaSectionDesktop = () => {
   return(
     <>
       <NavBarCategoriesDesktop />
-      <MapaContent />
-      <MapaAcordeonBtn />
+      <main className='map-section-container'>
+        <MapaContent />
+        <h2 className='accordion-container-title'>Listado de murales por comuna y barrio</h2>
+        <MapaAcordeonBtn />
+      </main>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const AcordeonItem = ({ comuna, barrios, murales }) => {
   const [ isActive, setIsActive ] = useState(false);

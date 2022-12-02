@@ -111,5 +111,103 @@
 }
 
 @media (min-width: 900px) {
+  .map-section-container {
+    .map-section-title {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: $fz-title;
+    }
+    .map-container {
+      margin: 5% 0;
+    }
+    .accordion-container-title {
+      text-align: center;
+    }
+    .accordion-container {
+      @include flexbox(flex, column, nowrap, flex-start, stretch);
+      gap: 2rem;
+      padding: 5% 5%;
+      margin-bottom: 2rem;
+      .accordion-wrapper {
+        @include flexbox(flex, row, nowrap, flex-start, stretch);
+        height: 15vh;
+        .comunas-btn-collapsible{
+          width: 40%;
+          @include flexbox(flex, row, nowrap, flex-start, center);
+          color: $light;
+          background-color: $main;
+          border: none;
 
+          .comunas-btn-text {
+            min-width: 90%;
+            @include flexbox(flex, column, nowrap, flex-start, center);
+            padding: .5rem;
+            .comunas-btn-label {
+              font-size: $fz-subtitle;
+            }
+            .comunas-btn-barrios {
+              max-width: 80%;
+              font-size: $fz-text;
+              text-align: center;
+            }
+          }
+          .comunas-btn-icon {
+            min-width: 10%;
+            background-color: $main;
+            color: $light;
+            font-size: $fz-title;
+          }
+        }
+        .comunas-btn-content {
+          @include flexbox(flex, column, wrap, flex-start, stretch);
+          min-width: 60%;
+          max-height: 100%;
+          font-size: $fz-text;
+          color: $dark;
+          background-color: $light;
+          border: solid 0.1rem $main;
+          overflow: scroll;
+          line-height: 1.5;
+          text-align: center;
+        }
+      }
+      
+      // .comunas-container {
+      //   @include flexbox(flex, column, nowrap, flex-start, center);
+      //   color: $light;
+      //   background-color: $main;
+      //   font-family: 'Roboto';
+      //   .comunas-accordion {
+      //     max-width: 100%;
+      //     .accordion-item {
+      //       @include flexbox(flex, column, nowrap, flex-start, center);
+      //       .comunas-btn {
+      //         color: $light;
+      //         background-color: $main;
+      //         border: none;
+      //         font-family: 'Roboto';
+      //         .comunas-btn-h2 {
+      //           margin: .5rem;
+      //           font-size: $fz-subtitle;
+      //         }
+      //         .comunas-btn-barrios {
+      //           font-size: $fz-text;
+      //         }
+      //         .comunas-btn-icon {
+      //           font-size: $fz-text;
+      //         }
+      //       }
+      //       .comunas-btn-murales {
+      //         width: 100%;
+      //         @include flexbox(flex, column, nowrap, flex-start, center);
+      //         color: $dark;
+      //         background-color: $light;
+      //         border: .1rem solid $main;
+      //         font-size: $fz-text;
+      //       }
+      //     }
+      //   }
+      // }
+    }
+  }
 }

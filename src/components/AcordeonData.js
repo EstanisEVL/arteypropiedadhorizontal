@@ -2,7 +2,9 @@ export const accordionData = [{
     id: 1,
     comuna: 'Comuna 1',
     barrios: 'Retiro, San Nicolás, Puerto Madero, San Telmo, Montserrat y Constitución',
-    murales: `Lista de murales`
+    murales: `
+    Lista de murales,
+    `
   },
   {
     id: 2,
